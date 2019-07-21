@@ -1,10 +1,10 @@
 import React from 'react';
 
-function CheckerBox({ trial, handleChange }) {
+function CheckerBox({ handleChange, handleClick }) {
   return (
     <div className="CheckerBox">
-        <h1> {trial} מרובה </h1>
-        <input type="text" placeholder='dcsdvdfbvdfbd' onChange={handleChange} />
+        <input type="text" placeholder='Write a statement to check' onChange={handleChange} />
+        <input type="submit" value="check" onClick={handleClick} />
     </div>
   );
 }
