@@ -1,0 +1,14 @@
+.text {
+  width:90%;
+  height: 50px;
+  font-size: 28px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.submit {
+  margin-top: 25px;
+}
+
+
