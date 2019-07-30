@@ -11,7 +11,7 @@ class PalindromeChecker extends Component {
     }
 
   handleChange = (sentence) => {
-    this.setState({ Sentence: sentence.target.value },)
+    this.setState({ Sentence: sentence.target.value })
   }
 
   handleClick = () => {
