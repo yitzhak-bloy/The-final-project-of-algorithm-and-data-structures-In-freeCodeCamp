@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CheckerBox from '../checkerBox/checkerBox';
 
 class PalindromeChecker extends Component {
@@ -33,9 +34,10 @@ class PalindromeChecker extends Component {
                 this.state.IsItPalindrome === false
                 ?       
                  <h1>Sorry, that's not a palindrome.</h1>
-                : 'Enter some alpha-numeric characters.'
+                : <h4>Enter some alpha-numeric characters</h4>
                 )
             }
+          <Link to='/' >HomePage</Link>
       </div>
     );
   }
