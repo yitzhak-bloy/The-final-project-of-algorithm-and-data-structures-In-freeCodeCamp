@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import PalindromeChecker from './Components/PalindromeChecker/PalindromeChecker';
 import HomePage from './HomePage';
+import PalindromeChecker from './Components/PalindromeChecker/PalindromeChecker';
+import RomanNumeralConverter from './Components/RomanNumeralConverter/RomanNumeralConverter'
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Route exact path='/' component={HomePage} />
       <Route path='/PalindromeChecker' component={PalindromeChecker} />
+      <Route path='/RomanNumeralConverter' component={RomanNumeralConverter} />
     </div>
   );
 }
