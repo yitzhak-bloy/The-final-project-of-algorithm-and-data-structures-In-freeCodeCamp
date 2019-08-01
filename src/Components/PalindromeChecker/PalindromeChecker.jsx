@@ -25,19 +25,21 @@ class PalindromeChecker extends Component {
   render() {
     return (
       <div className="PalindromeChecker">
-          <h1>Palindrome Checker</h1>
-          <CheckerBox handleChange={this.handleChange} handleClick={this.handleClick} />
-            { this.state.IsItPalindrome === true
-              ? 
-              <h1>It's a palindrome!</h1>
-              : (
-                this.state.IsItPalindrome === false
-                ?       
-                 <h1>Sorry, that's not a palindrome.</h1>
-                : <h4>Enter some alpha-numeric characters</h4>
-                )
-            }
+        <h1>Palindrome Checker</h1>
+        <CheckerBox handleChange={this.handleChange} handleClick={this.handleClick} />
+        { this.state.IsItPalindrome === true
+          ? 
+          <h1>It's a palindrome!</h1>
+          : (
+            this.state.IsItPalindrome === false
+            ?       
+              <h1>Sorry, that's not a palindrome.</h1>
+            : <span>Enter some alpha-numeric characters</span>
+            )
+        }
+        <div>
           <Link to='/' >HomePage</Link>
+        </div>
       </div>
     );
   }
