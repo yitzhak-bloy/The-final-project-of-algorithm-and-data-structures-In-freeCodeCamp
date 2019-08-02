@@ -15,11 +15,20 @@ class RomanNumeralConverter extends Component {
     console.log(this.state.Number)
   }
 
+  handleClick = () => {
+
+  }
+
   render() {
     return (
       <div className="RomanNumeralConverter">
           <h1>Roman Numeral Converter</h1>
-          <CheckerBox handleChange={this.handleChange} handleClick={this.handleClick} />
+          <CheckerBox 
+            handleChange={this.handleChange} 
+            handleClick={this.handleClick}
+            sentenceWithinTheInputFrame='Write a number to convert'  
+            WordWrittenInAButton='convert'  
+          />
           <Link to='/'>HomePage</Link>
       </div>
     );
