@@ -9,7 +9,7 @@ function HomePage() {
         <Link to='/PalindromeChecker' >PalindromeChecker</Link>
       </div>
       <Link to='/RomanNumeralConverter' >RomanNumeralConverter</Link>
-      <h3>לחיצה</h3>
+      <h1>Home Page</h1>
     </div>
   );
 }

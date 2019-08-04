@@ -15,7 +15,6 @@ class RomanNumeralConverter extends Component {
 
   handleChange = (sentence) => {
     this.setState({ Number: sentence.target.value })
-    console.log(this.state.Number)
   }
 
   handleClick = () => {
@@ -23,7 +22,6 @@ class RomanNumeralConverter extends Component {
     const Hundreds = Math.floor((this.state.Number-Thousands)/100) * 100;
     const Dozens = Math.floor((this.state.Number-Thousands-Hundreds)/10) * 10;
     const Single = Math.floor((this.state.Number-Thousands-Hundreds-Dozens)/1);
-    console.log( Single)
 
     let ThousandsRomanNumeral = '';
     let HundredsRomanNumeral = '';
@@ -58,6 +56,8 @@ class RomanNumeralConverter extends Component {
       case 9000:
         ThousandsRomanNumeral = 'MMMMMMMMM';
       break;
+
+      default:
     }
 
     switch (Hundreds) {
@@ -88,6 +88,8 @@ class RomanNumeralConverter extends Component {
       case 900:
         HundredsRomanNumeral = 'CM';
       break;
+            
+      default:
     }
 
     switch (Dozens) {
@@ -118,6 +120,8 @@ class RomanNumeralConverter extends Component {
       case 90:
         DozensRomanNumeral = 'XC';
       break;
+            
+      default:
     }
 
     switch (Single) {
@@ -148,6 +152,8 @@ class RomanNumeralConverter extends Component {
       case 9:
         SingleRomanNumeral = 'IX';
       break;
+            
+      default:
     }  
 
     let z = ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral;
@@ -158,25 +164,27 @@ class RomanNumeralConverter extends Component {
   render() {
     return (
       <div className="RomanNumeralConverter">
-          <h1>Roman Numeral Converter</h1>
-          <CheckerBox 
-            handleChange={this.handleChange} 
-            handleClick={this.handleClick}
-            sentenceWithinTheInputFrame='Write a number to convert'  
-            WordWrittenInAButton='convert'  
-          />
-          
-          {
-            this.state.RomanNumbers.length
-            ?
-            <div>
-              <h2> The number in Roman is: </h2>
-              <h1>{this.state.RomanNumbers}</h1>
-            </div>
-            :
-            <h4>Write down a number you want to convert to a Roman number</h4>
-          }
+        <h1>Roman Numeral Converter</h1>
+        <CheckerBox 
+          handleChange={this.handleChange} 
+          handleClick={this.handleClick}
+          sentenceWithinTheInputFrame='Write a number to convert'  
+          WordWrittenInAButton='convert'  
+        />
+        
+        {
+          this.state.RomanNumbers.length
+          ?
+          <div>
+            <h2> The number in Roman is: </h2>
+            <h1>{this.state.RomanNumbers}</h1>
+          </div>
+          :
+          <span>Write down a number you want to convert to a Roman number</span>
+        }
+        <div>
           <Link to='/'>HomePage</Link>
+        </div>
       </div>
     );
   }

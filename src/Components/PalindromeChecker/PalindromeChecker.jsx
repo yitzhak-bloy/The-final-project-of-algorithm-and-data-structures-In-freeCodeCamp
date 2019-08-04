@@ -27,18 +27,23 @@ class PalindromeChecker extends Component {
       <div className="PalindromeChecker">
         <h1>Palindrome Checker</h1>
         <CheckerBox 
-        handleChange={this.handleChange} 
-        handleClick={this.handleClick} 
-        sentenceWithinTheInputFrame='Write a statement to check'  WordWrittenInAButton='check' />
-        { this.state.IsItPalindrome === true
+          handleChange={this.handleChange} 
+          handleClick={this.handleClick} 
+          sentenceWithinTheInputFrame='Write a statement to check'  
+          WordWrittenInAButton='check' 
+        />
+        { 
+          this.state.IsItPalindrome === true
           ? 
           <h1>It's a palindrome!</h1>
-          : (
+          : 
+          (
             this.state.IsItPalindrome === false
             ?       
-              <h1>Sorry, that's not a palindrome.</h1>
-            : <span>Enter some alpha-numeric characters</span>
-            )
+            <h1>Sorry, that's not a palindrome.</h1>
+            : 
+            <span>Enter some alpha-numeric characters</span>
+          )
         }
         <div>
           <Link to='/' >HomePage</Link>
