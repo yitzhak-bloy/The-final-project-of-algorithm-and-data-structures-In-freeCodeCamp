@@ -8,7 +8,8 @@ class RomanNumeralConverter extends Component {
   constructor() {
       super();
       this.state = {
-        Number: ''
+        Number: '',
+        RomanNumbers: ''
       };
     }
 
@@ -148,7 +149,10 @@ class RomanNumeralConverter extends Component {
         SingleRomanNumeral = 'IX';
       break;
     }  
-    console.log(ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral)
+
+    let z = ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral;
+    this.setState( { RomanNumbers: z } )
+    console.log(this.state.RomanNumbers)
   }
 
   render() {
@@ -161,6 +165,17 @@ class RomanNumeralConverter extends Component {
             sentenceWithinTheInputFrame='Write a number to convert'  
             WordWrittenInAButton='convert'  
           />
+          
+          {
+            this.state.RomanNumbers.length
+            ?
+            <div>
+              <h2> The number in Roman is: </h2>
+              <h1>{this.state.RomanNumbers}</h1>
+            </div>
+            :
+            <h4>Write down a number you want to convert to a Roman number</h4>
+          }
           <Link to='/'>HomePage</Link>
       </div>
     );
