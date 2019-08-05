@@ -9,6 +9,9 @@ function HomePage() {
         <Link to='/PalindromeChecker' >PalindromeChecker</Link>
       </div>
       <Link to='/RomanNumeralConverter' >RomanNumeralConverter</Link>
+      <div>
+        <Link to='/CaesarsCipher' >CaesarsCipher</Link>
+      </div>
       <h1>Home Page</h1>
     </div>
   );
