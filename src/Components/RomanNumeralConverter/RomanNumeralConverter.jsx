@@ -19,10 +19,10 @@ class RomanNumeralConverter extends Component {
   }
 
   handleClick = () => {
-    const Thousands = Math.floor(this.state.Number/1000) * 1000;
-    const Hundreds = Math.floor((this.state.Number-Thousands)/100) * 100;
-    const Dozens = Math.floor((this.state.Number-Thousands-Hundreds)/10) * 10;
-    const Single = Math.floor((this.state.Number-Thousands-Hundreds-Dozens)/1);
+    const Thousands = Math.floor(this.state.Number / 1000) * 1000;
+    const Hundreds = Math.floor((this.state.Number-Thousands) / 100) * 100;
+    const Dozens = Math.floor((this.state.Number-Thousands-Hundreds) / 10) * 10;
+    const Single = Math.floor((this.state.Number-Thousands-Hundreds-Dozens) / 1);
 
     switch (Thousands) {
       case 1000:
@@ -154,6 +154,7 @@ class RomanNumeralConverter extends Component {
   }
 
   render() {
+    const { ThousandsRomanNumeral, HundredsRomanNumeral, DozensRomanNumeral, SingleRomanNumeral } = this.state;
     return (
       <div className="RomanNumeralConverter">
         <h1>Roman Numeral Converter</h1>
@@ -164,11 +165,11 @@ class RomanNumeralConverter extends Component {
           WordWrittenInAButton='convert'  
         />
         {
-          this.state.ThousandsRomanNumeral.length + this.state.HundredsRomanNumeral.length + this.state.DozensRomanNumeral.length + this.state.SingleRomanNumeral.length
+          ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length
           ?
           <div>
             <h2> The number in Roman is: </h2>
-            <h1>{this.state.ThousandsRomanNumeral + this.state.HundredsRomanNumeral + this.state.DozensRomanNumeral + this.state.SingleRomanNumeral}</h1>
+            <h1>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</h1>
           </div>
           :
           <span>Write down a number you want to convert to a Roman number</span>
