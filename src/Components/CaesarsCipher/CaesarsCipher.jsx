@@ -9,6 +9,7 @@ class  CaesarsCipher extends Component {
     super();
     this.state = {
       Sentence: '',
+      result1: ''
     };
   }
 
@@ -19,7 +20,6 @@ class  CaesarsCipher extends Component {
   handleClick = () => {
     let result = [];
     let SentenceToConver = this.state.Sentence;
-    console.log(SentenceToConver)
     for (let i = 0; i < SentenceToConver.length; i++) {
       switch (SentenceToConver[i].toUpperCase()) {
         case 'A':
@@ -104,7 +104,8 @@ class  CaesarsCipher extends Component {
           result.push(SentenceToConver[i])
       }
     }
-    console.log(result.join(''))
+    result = result.join('')
+    this.setState({ result1: result})
   }
 
   render() {
@@ -118,7 +119,19 @@ class  CaesarsCipher extends Component {
           WordWrittenInAButton='convert' 
         />
         <div>
-          <Link to='/' >HomePage</Link>
+          {
+            this.state.result1.length
+            ?
+            <div>
+              <h2> The Caesars Cipher after conversion is </h2>
+              <h1>{this.state.result1}</h1>
+            </div>
+            :
+            <span>Write a sentence in Caesars Cipher</span>
+          }
+          <div>
+            <Link to='/' >HomePage</Link>
+          </div>
         </div>
       </div>
     );
