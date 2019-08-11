@@ -6,11 +6,11 @@ function HomePage() {
   return (
     <div className="homePage">
       <div>
-        <Link to='/PalindromeChecker' >PalindromeChecker</Link>
+        <Link to='/PalindromeChecker' className='link' >PalindromeChecker</Link>
       </div>
-      <Link to='/RomanNumeralConverter' >RomanNumeralConverter</Link>
+      <Link to='/RomanNumeralConverter' className='link' >RomanNumeralConverter</Link>
       <div>
-        <Link to='/CaesarsCipher' >CaesarsCipher</Link>
+        <Link to='/CaesarsCipher' className='link' >CaesarsCipher</Link>
       </div>
       <h1>Home Page</h1>
     </div>

@@ -36,3 +36,7 @@ a {
   text-decoration: none;
   color: rgb(68, 0, 255);
 }
+
+.link {
+  font-size: 30px;
+}

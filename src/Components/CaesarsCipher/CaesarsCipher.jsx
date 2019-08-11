@@ -130,7 +130,7 @@ class  CaesarsCipher extends Component {
             <span>Write a sentence in Caesars Cipher</span>
           }
           <div>
-            <Link to='/' >HomePage</Link>
+            <Link to='/' className='link' >HomePage</Link>
           </div>
         </div>
       </div>
