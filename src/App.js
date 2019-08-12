@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import PalindromeChecker from './Components/PalindromeChecker/PalindromeChecker';
 import RomanNumeralConverter from './Components/RomanNumeralConverter/RomanNumeralConverter'
 import CaesarsCipher from './Components/CaesarsCipher/CaesarsCipher'
+import TelephoneNumberValidator from './Components/TelephoneNumberValidator/TelephoneNumberValidator'
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path='/PalindromeChecker' component={PalindromeChecker} />
       <Route path='/RomanNumeralConverter' component={RomanNumeralConverter} />
       <Route path='/CaesarsCipher' component={CaesarsCipher} />
+      <Route path='/TelephoneNumberValidator' component={TelephoneNumberValidator} />
     </div>
   );
 }

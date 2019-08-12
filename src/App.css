@@ -39,4 +39,5 @@ a {
 
 .link {
   font-size: 30px;
+  border-block-color: green;
 }
