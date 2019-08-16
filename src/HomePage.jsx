@@ -15,6 +15,9 @@ function HomePage() {
       <div>
         <Link to='/TelephoneNumberValidator' className='link' >Telephone Number Validator</Link>
       </div>
+      <div>
+        <Link to='/cashRegister' className='link' >Cash Register</Link>
+      </div>
       <h1>Home Page</h1>
     </div>
   );
