@@ -6,8 +6,8 @@ class CashRegister extends Component {
   constructor() {
     super();
     this.state = {
-      phoneNumber: '',
-      result: ''
+      ProductCost: '',
+      Excess: ''
     };
   }
 
@@ -24,3 +24,9 @@ class CashRegister extends Component {
 }
 
 export default CashRegister;
+
+
+
+// בנית קומפוננט שתכיל  שני מקומות לפלט העודף ולפלט העלות מוצר
+// בנית קומפוננה שץכיל מקום להכניס את הסכום שנמצא בקופה בחלוקה לפי מטבעות
+// בניית האלגוריתם שינתח ויפלוט את העודף שמגיע ללקוח
