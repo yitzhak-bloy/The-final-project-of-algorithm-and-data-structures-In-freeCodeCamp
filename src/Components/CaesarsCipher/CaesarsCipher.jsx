@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox';
+import Button from '../button/button';
 
 // import CheckerBox from '../checkerBox/checkerBox';
 
@@ -114,9 +115,11 @@ class  CaesarsCipher extends Component {
         <h1>Caesars Cipher</h1>
         <InputBox 
           handleChange={this.handleChange} 
+          sentenceWithinTheInputFrame='Write a statement to check'  
+        />
+        <Button
           handleClick={this.handleClick} 
-          sentenceWithinTheInputFrame='Write a statement to convert'  
-          WordWrittenInAButton='convert' 
+          WordWrittenInAButton='check' 
         />
         <div>
           {

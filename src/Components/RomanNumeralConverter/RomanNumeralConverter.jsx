@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InputBox from '../inputBox/InputBox';
+import Button from '../button/button';
 import { Link } from 'react-router-dom';
 
 class RomanNumeralConverter extends Component {
@@ -160,9 +161,11 @@ class RomanNumeralConverter extends Component {
         <h1>Roman Numeral Converter</h1>
         <InputBox 
           handleChange={this.handleChange} 
-          handleClick={this.handleClick}
-          sentenceWithinTheInputFrame='Write a number to convert'  
-          WordWrittenInAButton='convert'  
+          sentenceWithinTheInputFrame='Write a statement to check'  
+        />
+        <Button
+          handleClick={this.handleClick} 
+          WordWrittenInAButton='check' 
         />
         {
           ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length

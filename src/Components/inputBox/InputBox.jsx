@@ -1,11 +1,10 @@
 import React from 'react';
 import './inputBox.css';
 
-function InputBox({ handleChange, handleClick, sentenceWithinTheInputFrame, WordWrittenInAButton }) {
+function InputBox({ handleChange,sentenceWithinTheInputFrame }) {
   return (
-    <div className="CheckerBox">
+    <div>
         <input className="text" type="text" placeholder={sentenceWithinTheInputFrame} onChange={handleChange} />
-        <input className="submit" type="submit" value={WordWrittenInAButton} onClick={handleClick} />
     </div>
   );
 }
