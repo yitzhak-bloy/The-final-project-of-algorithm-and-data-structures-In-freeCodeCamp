@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import CheckerBox from '../checkerBox/checkerBox';
+import InputBox from '../inputBox/InputBox'
+import Button from '../button/button';
 
 class CashRegister extends Component {
   constructor() {
@@ -15,6 +16,22 @@ class CashRegister extends Component {
     return (
       <div className="cashRegister">
         <h1>Cash Register</h1>
+        <div>
+          <InputBox 
+            handleChange={this.handleChange} 
+            sentenceWithinTheInputFrame='Write the product price'  
+          />
+        </div>
+        <div>
+          <InputBox 
+            handleChange={this.handleChange} 
+            sentenceWithinTheInputFrame='Write down the amount the customer brought'  
+          />
+        </div>
+          <Button
+            handleClick={this.handleClick} 
+            WordWrittenInAButton='check' 
+          />
         <div>
           <Link to='/' className='link' >HomePage</Link>
         </div>
