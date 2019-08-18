@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox'
 import Button from '../button/button';
+import CurrencyAvailable from '../CurrencyAvailable/CurrencyAvailable'
 
 class CashRegister extends Component {
   constructor() {
     super();
     this.state = {
       price: '',
-      paidUp: ''
+      cash: ''
     };
   }
 
@@ -17,7 +18,7 @@ class CashRegister extends Component {
   }
 
   handlePayment = (sentence) => {
-    this.setState({ paidUp: sentence.target.value })
+    this.setState({ cash: sentence.target.value })
   }
 
   render() {
@@ -36,12 +37,13 @@ class CashRegister extends Component {
             sentenceWithinTheInputFrame='Write down the amount the customer brought'  
           />
         </div>
+        <CurrencyAvailable />
           <Button
             handleClick={this.handleClick} 
             WordWrittenInAButton='check' 
           />
           <h1>{this.state.price}</h1>
-          <h1>{this.state.paidUp}</h1>
+          <h1>{this.state.cash}</h1>
         <div>
           <Link to='/' className='link' >HomePage</Link>
         </div>
