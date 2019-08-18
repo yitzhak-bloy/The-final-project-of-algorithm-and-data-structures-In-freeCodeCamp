@@ -7,9 +7,17 @@ class CashRegister extends Component {
   constructor() {
     super();
     this.state = {
-      ProductCost: '',
-      Excess: ''
+      price: '',
+      paidUp: ''
     };
+  }
+
+  handlePrice = (sentence) => {
+    this.setState({ price: sentence.target.value })
+  }
+
+  handlePayment = (sentence) => {
+    this.setState({ paidUp: sentence.target.value })
   }
 
   render() {
@@ -18,13 +26,13 @@ class CashRegister extends Component {
         <h1>Cash Register</h1>
         <div>
           <InputBox 
-            handleChange={this.handleChange} 
+            handleChange={this.handlePrice} 
             sentenceWithinTheInputFrame='Write the product price'  
           />
         </div>
         <div>
           <InputBox 
-            handleChange={this.handleChange} 
+            handleChange={this.handlePayment} 
             sentenceWithinTheInputFrame='Write down the amount the customer brought'  
           />
         </div>
@@ -32,6 +40,8 @@ class CashRegister extends Component {
             handleClick={this.handleClick} 
             WordWrittenInAButton='check' 
           />
+          <h1>{this.state.price}</h1>
+          <h1>{this.state.paidUp}</h1>
         <div>
           <Link to='/' className='link' >HomePage</Link>
         </div>
