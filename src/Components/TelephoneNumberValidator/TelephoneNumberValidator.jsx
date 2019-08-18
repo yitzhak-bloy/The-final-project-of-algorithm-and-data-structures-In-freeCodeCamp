@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CheckerBox from '../checkerBox/checkerBox';
+import InputBox from '../inputBox/InputBox';
 
 class  TelephoneNumberValidator extends Component {
   constructor() {
@@ -24,7 +24,7 @@ class  TelephoneNumberValidator extends Component {
     return (
       <div className="telephoneNumberValidator">
         <h1>telephone Number Validator</h1>
-        <CheckerBox 
+        <InputBox 
           handleChange={this.handleChange} 
           handleClick={this.handleClick} 
           sentenceWithinTheInputFrame='Write a verification phone number'  

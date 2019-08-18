@@ -1,7 +1,7 @@
 import React from 'react';
-import './checkerBox.css';
+import './inputBox.css';
 
-function CheckerBox({ handleChange, handleClick, sentenceWithinTheInputFrame, WordWrittenInAButton }) {
+function InputBox({ handleChange, handleClick, sentenceWithinTheInputFrame, WordWrittenInAButton }) {
   return (
     <div className="CheckerBox">
         <input className="text" type="text" placeholder={sentenceWithinTheInputFrame} onChange={handleChange} />
@@ -10,4 +10,4 @@ function CheckerBox({ handleChange, handleClick, sentenceWithinTheInputFrame, Wo
   );
 }
 
-export default CheckerBox;
+export default InputBox;

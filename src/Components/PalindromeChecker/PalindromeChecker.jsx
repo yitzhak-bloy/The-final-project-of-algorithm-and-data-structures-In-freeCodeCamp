@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CheckerBox from '../checkerBox/checkerBox';
+import InputBox from '../inputBox/InputBox'
 
 class PalindromeChecker extends Component {
   constructor() {
@@ -26,7 +26,7 @@ class PalindromeChecker extends Component {
     return (
       <div className="PalindromeChecker">
         <h1>Palindrome Checker</h1>
-        <CheckerBox 
+        <InputBox 
           handleChange={this.handleChange} 
           handleClick={this.handleClick} 
           sentenceWithinTheInputFrame='Write a statement to check'  

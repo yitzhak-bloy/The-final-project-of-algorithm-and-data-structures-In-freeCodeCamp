@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CheckerBox from '../checkerBox/checkerBox';
+import InputBox from '../inputBox/InputBox';
 import { Link } from 'react-router-dom';
 
 class RomanNumeralConverter extends Component {
@@ -158,7 +158,7 @@ class RomanNumeralConverter extends Component {
     return (
       <div className="RomanNumeralConverter">
         <h1>Roman Numeral Converter</h1>
-        <CheckerBox 
+        <InputBox 
           handleChange={this.handleChange} 
           handleClick={this.handleClick}
           sentenceWithinTheInputFrame='Write a number to convert'  
