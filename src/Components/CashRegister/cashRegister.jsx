@@ -40,7 +40,7 @@ class CashRegister extends Component {
         <CurrencyAvailable />
           <Button
             handleClick={this.handleClick} 
-            WordWrittenInAButton='check' 
+            WordWrittenInAButton='Calculate the excess' 
           />
           <h1>{this.state.price}</h1>
           <h1>{this.state.cash}</h1>
