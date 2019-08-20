@@ -4,6 +4,37 @@ import InputBox from '../inputBox/InputBox'
 import Button from '../button/button';
 import CurrencyAvailable from '../CurrencyAvailable/CurrencyAvailable'
 
+let solution = [];
+const CurrencyValue = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
+const CoinName = ['PENNY', 'NICKEL', 'DIME', 'QUARTER', 'ONE', 'FIVE', 'TEN', 'TWENTY', 'ONE HUNDRED']
+let state = '';
+  
+const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
+  if ((CurrencyValue[CurrentCurrency] * Math.floor(Excess / CurrencyValue[CurrentCurrency])) > cid[cidNamber][1]) {
+    solution.unshift([CoinName[Name], cid[cidNamber][1]])
+    Excess -= (cid[cidNamber][1])
+    Excess = Excess.toFixed(2)
+  } else {
+    solution.unshift([CoinName[Name], CurrencyValue[CurrentCurrency] * Math.floor(Excess / CurrencyValue[CurrentCurrency])])
+    Excess -= (CurrencyValue[CurrentCurrency] * Math.floor(Excess / CurrencyValue[CurrentCurrency]))
+    Excess = Excess.toFixed(2)
+  }
+
+  if (Excess) {
+    if (CurrentCurrency > 0) {
+      CurrentCurrency--
+      Name--
+      cidNamber--
+      calculation(Excess, CurrentCurrency, Name, cidNamber, cid)
+    } else {
+      if (Excess > 0) {
+      state = "insufficient"
+      }
+    }
+  }
+}
+
+
 class CashRegister extends Component {
   constructor() {
     super();
@@ -66,6 +97,18 @@ class CashRegister extends Component {
     this.setState({ oneHundred: sentence.target.value})
   }
 
+  
+
+  handleClick = () => {
+    const cid = [['PENNY', this.state.penny], ['NICKEL', this.state.nickel], ['DIME', this.state.dime], ['QUARTER', this.state.quarter], ['ONE', this.state.one], ['FIVE', this.state.five], ['TEN', this.state.ten], ['TWENTY', this.state.twenty], ['ONE HUNDRED', this.state.oneHundred]]
+    const Excess = (this.state.cash - this.state.price).toFixed(2);
+
+    
+    calculation(Excess, 8, 8, 8, cid)
+
+    console.log(Excess)
+  }
+
   render() {
     return (
       <div className="cashRegister">
@@ -93,13 +136,14 @@ class CashRegister extends Component {
           handleTwenty={this.handleTwenty}
           handleOneHundred={this.handleOneHundred}
         />
-          <Button
-            handleClick={this.handleClick} 
-            WordWrittenInAButton='Calculate the excess' 
-          />
-          <h1>{this.state.price}</h1>
-          <h1>{this.state.cash}</h1>
-          <h1>{this.state.penny},{this.state.nickel},{this.state.dime},{this.state.quarter},{this.state.one},{this.state.five},{this.state.ten},{this.state.twenty},{this.state.oneHundred}</h1>
+        <Button
+          handleClick={this.handleClick} 
+          WordWrittenInAButton='Calculate the excess' 
+        />
+        <h1>{this.state.price}</h1>
+        <h1>{this.state.cash}</h1>
+        <h1>{this.state.penny}, {this.state.nickel},{ this.state.dime}, {this.state.quarter}, {this.state.one}, {this.state.five}, {this.state.ten}, {this.state.twenty}, {this.state.oneHundred}</h1>
+        
         <div>
           <Link to='/' className='link' >HomePage</Link>
         </div>
