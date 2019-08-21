@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox'
 import Button from '../button/button';
 import CurrencyAvailable from '../CurrencyAvailable/CurrencyAvailable'
+import Calculation from '../calculation/calculation'
 
 let solution = [];
 const CurrencyValue = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
-const CoinName = ['PENNY', 'NICKEL', 'DIME', 'QUARTER', 'ONE', 'FIVE', 'TEN', 'TWENTY', 'ONE HUNDRED']
-let state = '';
+const CoinName = [', PENNY: ', ', NICKEL: ', ', DIME: ', ', QUARTER: ', ', ONE: ', ', FIVE: ', ', TEN: ', ', TWENTY: ', ', ONE HUNDRED: ']
+let State = '';
   
 const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
   if ((CurrencyValue[CurrentCurrency] * Math.floor(Excess / CurrencyValue[CurrentCurrency])) > cid[cidNamber][1]) {
@@ -28,7 +29,7 @@ const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
       calculation(Excess, CurrentCurrency, Name, cidNamber, cid)
     } else {
       if (Excess > 0) {
-      state = "insufficient"
+      State = "insufficient"
       }
     }
   }
@@ -39,6 +40,7 @@ class CashRegister extends Component {
   constructor() {
     super();
     this.state = {
+      Calculation: false,
       price: '',
       cash: '',
       penny: 0,
@@ -50,6 +52,7 @@ class CashRegister extends Component {
       ten: 0,
       twenty: 0,
       oneHundred: 0,
+      solution1: ''
     };
   }
 
@@ -100,16 +103,25 @@ class CashRegister extends Component {
   
 
   handleClick = () => {
-    const cid = [['PENNY', this.state.penny], ['NICKEL', this.state.nickel], ['DIME', this.state.dime], ['QUARTER', this.state.quarter], ['ONE', this.state.one], ['FIVE', this.state.five], ['TEN', this.state.ten], ['TWENTY', this.state.twenty], ['ONE HUNDRED', this.state.oneHundred]]
-    const Excess = (this.state.cash - this.state.price).toFixed(2);
+    // const cid = [['PENNY', this.state.penny], ['NICKEL', this.state.nickel], ['DIME', this.state.dime], ['QUARTER', this.state.quarter], ['ONE', this.state.one], ['FIVE', this.state.five], ['TEN', this.state.ten], ['TWENTY', this.state.twenty], ['ONE HUNDRED', this.state.oneHundred]]
+    // const Excess = (this.state.cash - this.state.price).toFixed(2);
 
     
-    calculation(Excess, 8, 8, 8, cid)
+    // calculation(Excess, 8, 8, 8, cid)
+    // let filterSolution = (solution.filter((item) => item[1] > 0)).reverse();
 
-    console.log(Excess)
+    // this.setState({solution1: filterSolution})
+    this.setState({ calculation: true })
+    // this.setState({
+    //   solution1: ''
+    // })
+
+    // console.log(filterSolution)
   }
 
   render() {
+    const cid = [['PENNY', this.state.penny], ['NICKEL', this.state.nickel], ['DIME', this.state.dime], ['QUARTER', this.state.quarter], ['ONE', this.state.one], ['FIVE', this.state.five], ['TEN', this.state.ten], ['TWENTY', this.state.twenty], ['ONE HUNDRED', this.state.oneHundred]]
+    const excess = (this.state.cash - this.state.price).toFixed(2);
     return (
       <div className="cashRegister">
         <h1>Cash Register</h1>
@@ -140,10 +152,16 @@ class CashRegister extends Component {
           handleClick={this.handleClick} 
           WordWrittenInAButton='Calculate the excess' 
         />
-        <h1>{this.state.price}</h1>
-        <h1>{this.state.cash}</h1>
-        <h1>{this.state.penny}, {this.state.nickel},{ this.state.dime}, {this.state.quarter}, {this.state.one}, {this.state.five}, {this.state.ten}, {this.state.twenty}, {this.state.oneHundred}</h1>
+        { this.state.calculation ? <Calculation cid={cid} excess={excess} /> : null }
         
+        {/* <h1>{this.state.penny}, {this.state.nickel},{ this.state.dime}, {this.state.quarter}, {this.state.one}, {this.state.five}, {this.state.ten}, {this.state.twenty}, {this.state.oneHundred}</h1> */}
+        {/* {
+          State === ''
+          ?
+          <h1>{this.state.solution1}</h1>
+          : 
+          <h1>INSUFFICIENT FUNDS</h1>
+        } */}
         <div>
           <Link to='/' className='link' >HomePage</Link>
         </div>
