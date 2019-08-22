@@ -1,3 +1,4 @@
+    
 import React, { Component } from 'react';
 
 let solution = [];
@@ -53,7 +54,7 @@ class Calculation extends Component {
         {/* <h1>Calculation: { this.props.cid }</h1>
         <h1>excess: { this.props.excess }</h1> */}
         {
-          { State } === false ?  <h1>insufficient</h1> : <h1>{ filterSolution }</h1>
+          State  === false ?  <h1>insufficient</h1> : <h1>{ filterSolution }</h1>
         }
         {/* <h1>State: { State } </h1>
         <h1>solution: { solution } </h1> */}
