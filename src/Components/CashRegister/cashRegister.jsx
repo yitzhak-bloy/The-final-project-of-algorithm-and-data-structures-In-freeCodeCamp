@@ -102,12 +102,14 @@ class CashRegister extends Component {
     return (
       <div className="cashRegister">
         <h1>Cash Register</h1>
+        <h3>product price</h3>
         <div>
           <InputBox 
             handleChange={this.handlePrice} 
             sentenceWithinTheInputFrame='Write the product price'  
           />
         </div>
+        <h3>The amount received from the customer</h3>
         <div>
           <InputBox 
             handleChange={this.handlePayment} 

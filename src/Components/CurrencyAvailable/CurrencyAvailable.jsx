@@ -4,7 +4,7 @@ import './CurrencyAvailable.css';
 function CurrencyAvailable({ handlePenny, handleNickel, handleDime, handleQuarter, handleOne, handleFive, handleTen, handleTwenty, handleOneHundred }) {
   return (
     <div>
-        <h1>Currency </h1>
+        <h3>The amount of coins currently in the cash register</h3>
         <input className="number" type="number" step="0.01" min="0" placeholder={'Penny'} onChange={handlePenny} />
         <input className="number" type="number" step="0.05" min="0" placeholder={'Nickel'} onChange={handleNickel} />
         <input className="number" type="number" step="0.1" min="0" placeholder={'Dime'} onChange={handleDime} />
