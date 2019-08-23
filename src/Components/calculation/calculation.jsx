@@ -47,19 +47,15 @@ class Calculation extends Component {
       };
     }
 
-
   render() {
+    solution = [];
     calculation(this.props.excess, 8, 8, 8, this.props.cid)
     let filterSolution = (solution.filter((item) => item[1] > 0)).reverse();
     return (
       <div>
-        {/* <h1>Calculation: { this.props.cid }</h1>
-        <h1>excess: { this.props.excess }</h1> */}
         {
           State  === false ?  <h1>insufficient</h1> : <h1>{ filterSolution }</h1>
         }
-        {/* <h1>State: { State } </h1>
-        <h1>solution: { solution } </h1> */}
       </div>
     );
   }
