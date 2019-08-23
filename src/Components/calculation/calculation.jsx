@@ -34,6 +34,8 @@ const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
     } else {
         State = false;
     }
+  } else {
+    State = true;
   }
 }
 
