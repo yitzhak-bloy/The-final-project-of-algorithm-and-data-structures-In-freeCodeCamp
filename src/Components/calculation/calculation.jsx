@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 let solution = [];
 const CurrencyValue = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
-const CoinName = [', PENNY: ', ', NICKEL: ', ', DIME: ', ', QUARTER: ', ', ONE: ', ', FIVE: ', ', TEN: ', ', TWENTY: ', ', ONE HUNDRED: ']
+const CoinName = [' PENNY: ', ' NICKEL: ', ' DIME: ', ' QUARTER: ', ' ONE: ', ' FIVE: ', ' TEN: ', ' TWENTY: ', ' ONE HUNDRED: ']
 let State = true;
 
 const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
@@ -11,7 +11,7 @@ const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
 
 // במקרה שאין את כל הכמות שנכנסת למטבע מכניסים את כל המטבע שנמצא בקופה
   if ((CurrencyValue[CurrentCurrency] * Math.floor(Excess / CurrencyValue[CurrentCurrency])) > cid[cidNamber][1]) {
-    solution.unshift([CoinName[Name], cid[cidNamber][1]])
+    solution.unshift([CoinName[Name], cid[cidNamber][1]],)
     Excess -= (cid[cidNamber][1])
     Excess = Excess.toFixed(2)
 //  במקרה שיש את כל כמות המטבע שאפשר להכניס לעודף מכניסים את הכמות הזאת
