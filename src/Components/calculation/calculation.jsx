@@ -54,7 +54,14 @@ class Calculation extends Component {
     return (
       <div>
         {
-          State  === false ?  <h1>insufficient</h1> : <h1>{ filterSolution }</h1>
+          State  === false 
+          ?  
+            <h1>insufficient</h1> 
+          : 
+            <div>
+              <h2>The excess required to pay the customer is:</h2>           
+              <h1>{ filterSolution }</h1>
+            </div>
         }
       </div>
     );
