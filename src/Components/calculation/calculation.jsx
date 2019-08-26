@@ -1,5 +1,4 @@
-    
-import React, { Component } from 'react';
+import React from 'react';
 
 let solution = [];
 const CurrencyValue = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
@@ -39,33 +38,25 @@ const calculation = (Excess ,CurrentCurrency, Name, cidNamber, cid) => {
   }
 }
 
-class Calculation extends Component {
-  constructor() {
-      super();
-      this.state = {
+function Calculation({ excess, cid }) {
+  solution = [];
+  calculation(excess, 8, 8, 8, cid)
+  let filterSolution = (solution.filter((item) => item[1] > 0)).reverse();
 
-      };
-    }
-
-  render() {
-    solution = [];
-    calculation(this.props.excess, 8, 8, 8, this.props.cid)
-    let filterSolution = (solution.filter((item) => item[1] > 0)).reverse();
-    return (
-      <div>
-        {
-          State  === false 
-          ?  
-            <h1>insufficient</h1> 
-          : 
-            <div>
-              <h2>The excess required to pay the customer is:</h2>           
-              <h1>{ filterSolution }</h1>
-            </div>
-        }
-      </div>
-    );
-  }
+  return (
+    <div>
+      {
+        State  === false 
+        ?  
+          <h1>insufficient</h1> 
+        : 
+          <div>
+            <h2>The excess required to pay the customer is:</h2>           
+            <h1>{ filterSolution }</h1>
+          </div>
+      }
+    </div>
+  );
 }
 
 export default Calculation;
