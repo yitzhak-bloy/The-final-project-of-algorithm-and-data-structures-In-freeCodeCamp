@@ -1,3 +1,23 @@
 .submit {
     margin-top: 25px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 50%;
+    height: 15%;
   }
+
+  .submit:hover {
+    background-color: rgb(33, 94, 35); /* Green */
+    color: white;
+  }
+
