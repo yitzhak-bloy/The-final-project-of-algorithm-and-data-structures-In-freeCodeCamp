@@ -1,9 +1,17 @@
 .text {
   width:90%;
-  height: 50px;
-  font-size: 28px;
+  height: 100%;
+  font-size: 58px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+  border: 1.5px solid #D49A6A;
+  border-radius: 4px;
+  color: #804515; 
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.text:focus {
+  background-color: lightblue;
 }
 
