@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <div className="homePage">
+      <h1>Home Page</h1>
       <div>
         <Link to='/PalindromeChecker' className='link' >Palindrome Checker</Link>
       </div>
@@ -18,7 +19,6 @@ function HomePage() {
       <div>
         <Link to='/cashRegister' className='link' >Cash Register</Link>
       </div>
-      <h1>Home Page</h1>
     </div>
   );
 }

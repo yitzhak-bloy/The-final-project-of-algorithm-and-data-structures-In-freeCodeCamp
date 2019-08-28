@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox'
 import Button from '../button/button'
+import './PalindromeChecker.css';
 
 class PalindromeChecker extends Component {
   constructor() {
@@ -49,7 +50,7 @@ class PalindromeChecker extends Component {
           )
         }
         <div>
-          <Link to='/' >HomePage</Link>
+          <Link to='/' className='link' >HomePage</Link>
         </div>
       </div>
     );

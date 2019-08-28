@@ -178,7 +178,7 @@ class RomanNumeralConverter extends Component {
           <span>Write down a number you want to convert to a Roman number</span>
         }
         <div>
-          <Link to='/'>HomePage</Link>
+          <Link to='/' className='link' >HomePage </Link>
         </div>
       </div>
     );

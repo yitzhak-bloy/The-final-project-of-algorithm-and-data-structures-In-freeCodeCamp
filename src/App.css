@@ -20,7 +20,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #1fee03;
 }
 
 @keyframes App-logo-spin {
@@ -38,6 +38,7 @@ a {
 }
 
 .link {
-  font-size: 30px;
-  border-block-color: green;
+  font-size: 250%;
+  line-height: 1.5;
+  text-shadow: 0.75px 0.5px rgb(164, 144, 238);
 }
