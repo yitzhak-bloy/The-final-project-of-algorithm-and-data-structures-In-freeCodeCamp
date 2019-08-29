@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox';
 import Button from '../button/button';
+import './CaesarsCipher.css';
+
 
 // import CheckerBox from '../checkerBox/checkerBox';
 
@@ -113,13 +115,17 @@ class  CaesarsCipher extends Component {
     return (
       <div className="CaesarsCipher">
         <h1>Caesars Cipher</h1>
+        <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string.</p>
+        <p>For example, in the following joke, the punchline has been obscured by ROT13:</p>
+        <p>'Why did the chicken cross the road? Gb trg gb gur bgure fvqr!'</p>
+        <p>git it a try!</p>
         <InputBox 
           handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a statement to check'  
+          sentenceWithinTheInputFrame='Write a sentence to convert'  
         />
         <Button
           handleClick={this.handleClick} 
-          WordWrittenInAButton='check' 
+          WordWrittenInAButton='conversion' 
         />
         <div>
           {

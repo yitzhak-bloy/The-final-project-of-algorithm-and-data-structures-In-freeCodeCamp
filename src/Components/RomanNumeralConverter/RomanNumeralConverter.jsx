@@ -161,11 +161,11 @@ class RomanNumeralConverter extends Component {
         <h1>Roman Numeral Converter</h1>
         <InputBox 
           handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a statement to check'  
+          sentenceWithinTheInputFrame='Write a number to convert'  
         />
         <Button
           handleClick={this.handleClick} 
-          WordWrittenInAButton='check' 
+          WordWrittenInAButton='conversion' 
         />
         {
           ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length
