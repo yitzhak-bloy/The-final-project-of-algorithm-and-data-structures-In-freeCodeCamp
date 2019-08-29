@@ -159,6 +159,8 @@ class RomanNumeralConverter extends Component {
     return (
       <div className="RomanNumeralConverter">
         <h1>Roman Numeral Converter</h1>
+        <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral</a></p>
+        <p>Note! The conversion only works until the number 9999 and no more.</p>
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a number to convert'  
