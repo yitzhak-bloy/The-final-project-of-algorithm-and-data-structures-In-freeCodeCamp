@@ -28,6 +28,7 @@ class PalindromeChecker extends Component {
     return (
       <div className="PalindromeChecker">
         <h1>Palindrome Checker</h1>
+        <p>Checks whether the given string is <a href="https://en.wikipedia.org/wiki/Palindrome" rel="noopener noreferrer" target="_blank" >Palindrome</a> or not.</p>
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a statement to check'  
