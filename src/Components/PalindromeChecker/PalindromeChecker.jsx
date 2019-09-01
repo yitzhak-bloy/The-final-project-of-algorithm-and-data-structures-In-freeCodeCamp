@@ -18,10 +18,11 @@ class PalindromeChecker extends Component {
   }
 
   handleClick = () => {
-    const alphanumeric = (this.state.Sentence.match(/[A-Za-z0-9]/g).join('').toLowerCase());
-    const alphanumericInReverse = (alphanumeric.split('').reverse().join(''))
-  
-    this.setState({IsItPalindrome: alphanumeric === alphanumericInReverse}) 
+    if (this.state.Sentence.search(/[A-Za-z0-9]/g) >= 0) {
+      const alphanumeric = (this.state.Sentence.match(/[A-Za-z0-9]/g).join('').toLowerCase());
+      const alphanumericInReverse = (alphanumeric.split('').reverse().join(''))
+      this.setState({IsItPalindrome: alphanumeric === alphanumericInReverse})   
+    }
   }
 
   render() {
