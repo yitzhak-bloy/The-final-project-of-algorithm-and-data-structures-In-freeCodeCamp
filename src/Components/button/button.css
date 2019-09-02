@@ -3,17 +3,17 @@
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 40px;
+    font-size: 4vw;
     border-radius: 5px;
-    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    width: 50%;
-    height: 15%;
+    width: 75vw;
+    height: 6vw;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .submit:hover {
