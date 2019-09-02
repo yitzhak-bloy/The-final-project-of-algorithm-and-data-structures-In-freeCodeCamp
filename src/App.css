@@ -25,9 +25,7 @@ html,  body {
   color: white;
 }
 
-.App-link {
-  color: #1fee03;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -43,9 +41,20 @@ a {
   color: rgb(68, 0, 255);
 }
 
+a:visited {
+  color: #9383AA;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #9383AA;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .link {
   font-size: 250%;
   line-height: 1.5;
-  text-shadow: 0.75px 0.5px rgb(164, 144, 238);
+  text-shadow: 0.75px 0.5px #FAEABB;
 }
 

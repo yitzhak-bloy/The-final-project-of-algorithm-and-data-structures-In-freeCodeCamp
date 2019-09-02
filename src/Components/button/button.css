@@ -1,14 +1,15 @@
 .submit {
     margin-top: 25px;
-    background-color: #4CAF50;
+    background-color: #DFDBE5;
+    box-shadow:  0 0 10px  #9c92ac;
     border: none;
-    color: white;
+    color: #9c92ac;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 4vw;
     border-radius: 5px;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     cursor: pointer;
     width: 75vw;
     height: 6vw;
@@ -17,7 +18,7 @@
   }
 
   .submit:hover {
-    background-color: rgb(33, 94, 35);
-    color: white;
+    background-color: #9c92ac;
+    color: #DFDBE5;
   }
 
