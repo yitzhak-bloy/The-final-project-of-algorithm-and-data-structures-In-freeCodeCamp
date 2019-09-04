@@ -28,6 +28,7 @@ class PalindromeChecker extends Component {
   render() {
     return (
       <div className="PalindromeChecker">
+        <Link to='/' className='link1 link '  >HomePage</Link>
         <h1>Palindrome Checker</h1>
         <p>Checks whether the given string is <a href="https://en.wikipedia.org/wiki/Palindrome" rel="noopener noreferrer" target="_blank" >Palindrome</a> or not.</p>
         <InputBox 
@@ -52,7 +53,6 @@ class PalindromeChecker extends Component {
           )
         }
         <div>
-          <Link to='/' className='link' >HomePage</Link>
         </div>
       </div>
     );

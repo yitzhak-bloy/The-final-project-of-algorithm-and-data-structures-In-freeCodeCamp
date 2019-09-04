@@ -1,7 +1,11 @@
 .PalindromeChecker {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr 0.5fr 0.5fr 1fr 1fr 1fr;
 
+}
+
+.link1 {
+    font-size: 0.5vw;
+    display: flex;
 }
