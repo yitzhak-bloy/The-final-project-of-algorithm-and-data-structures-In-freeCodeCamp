@@ -1,5 +1,6 @@
 .PalindromeChecker {
     width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-rows: 0fr 0.5fr 0.5fr 1fr 1fr 1fr;
 
