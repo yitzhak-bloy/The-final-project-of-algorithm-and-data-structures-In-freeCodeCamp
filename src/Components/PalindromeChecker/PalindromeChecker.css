@@ -5,6 +5,7 @@
 }
 
 .link1 {
-    font-size: 0.5vw;
+    max-block-size: 0%;
+    margin-left: 3vmin;
     display: flex;
 }
