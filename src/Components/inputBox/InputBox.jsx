@@ -4,7 +4,7 @@ import './inputBox.css';
 function InputBox({ handleChange,sentenceWithinTheInputFrame }) {
   return (
     <div>
-        <input className="text" type="text" placeholder={sentenceWithinTheInputFrame} onChange={handleChange} />
+        <textarea className="text" name="textarea" placeholder={sentenceWithinTheInputFrame} onChange={handleChange} />
     </div>
   );
 }
