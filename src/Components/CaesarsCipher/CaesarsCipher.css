@@ -1,0 +1,11 @@
+.CaesarsCipher{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 0fr 0.5fr 0.2fr 0.5fr 0.5fr 0.4fr;
+}
+/* 
+.link1 {
+    max-block-size: 0%;
+    margin-left: 3vmin;
+    display: flex;
+} */

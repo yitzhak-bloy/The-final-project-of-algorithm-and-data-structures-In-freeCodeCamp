@@ -114,11 +114,14 @@ class  CaesarsCipher extends Component {
   render() {
     return (
       <div className="CaesarsCipher">
+      <Link to='/' className='link' >HomePage</Link>
         <h1>Caesars Cipher</h1>
-        <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string.</p>
-        <p>For example, in the following joke, the punchline has been obscured by ROT13:</p>
-        <p>'Why did the chicken cross the road? Gb trg gb gur bgure fvqr!'</p>
-        <p>git it a try!</p>
+        <div>
+          <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string.</p>
+          <p>For example, in the following joke, the punchline has been obscured by ROT13:</p>
+          <p>'Why did the chicken cross the road? Gb trg gb gur bgure fvqr!'</p>
+          <p>git it a try!</p>
+        </div>
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a sentence to convert'  
@@ -139,7 +142,6 @@ class  CaesarsCipher extends Component {
             <span>Write a sentence in Caesars Cipher</span>
           }
           <div>
-            <Link to='/' className='link' >HomePage</Link>
           </div>
         </div>
       </div>
