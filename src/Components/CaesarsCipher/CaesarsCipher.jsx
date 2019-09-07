@@ -114,7 +114,7 @@ class  CaesarsCipher extends Component {
   render() {
     return (
       <div className="CaesarsCipher">
-      <Link to='/' className='link' >HomePage</Link>
+      <Link to='/' className='link link1' >HomePage</Link>
         <h1>Caesars Cipher</h1>
         <div>
           <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string.</p>
