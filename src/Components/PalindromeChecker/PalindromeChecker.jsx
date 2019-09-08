@@ -33,7 +33,8 @@ class PalindromeChecker extends Component {
         <p>Checks whether the given string is <a href="https://en.wikipedia.org/wiki/Palindrome" rel="noopener noreferrer" target="_blank" >Palindrome</a> or not.</p>
         <InputBox 
           handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a statement to check'  
+          sentenceWithinTheInputFrame='Write a statement to check' 
+          CaesarsCipher
         />
         <Button
           handleClick={this.handleClick} 
