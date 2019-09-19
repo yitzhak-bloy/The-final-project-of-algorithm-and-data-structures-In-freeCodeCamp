@@ -168,7 +168,7 @@ class RomanNumeralConverter extends Component {
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a number'  
-          isInNumber
+          isRomanNumeralConverter
         />
         <Button
           handleClick={this.handleClick} 

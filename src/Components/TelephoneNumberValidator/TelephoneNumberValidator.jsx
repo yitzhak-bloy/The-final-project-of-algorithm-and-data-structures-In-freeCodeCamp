@@ -24,10 +24,14 @@ class  TelephoneNumberValidator extends Component {
   render() {
     return (
       <div className="telephoneNumberValidator">
+        <div>
+          <Link to='/' className='link link1' >HomePage</Link>
+        </div>
         <h1>telephone Number Validator</h1>
         <InputBox 
           handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a statement to check'  
+          sentenceWithinTheInputFrame='Write a number to check'
+          isTelephoneNumberValidator
         />
         <Button
           handleClick={this.handleClick} 
@@ -48,9 +52,6 @@ class  TelephoneNumberValidator extends Component {
               <h3>Sorry, this is not a real phone number. Try again.</h3>
             )
         }
-        <div>
-          <Link to='/' className='link' >HomePage</Link>
-        </div>
       </div>
     );
   }
