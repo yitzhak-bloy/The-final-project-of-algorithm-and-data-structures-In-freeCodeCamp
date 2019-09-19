@@ -1,9 +1,13 @@
 .CaesarsCipher{
         width: 100%;
         display: grid;
-        grid-template-rows: 0fr 0.5fr 0.2fr 0.5fr 0.5fr 0.4fr;
+        grid-template-rows: 0fr 0fr 0.2fr 0.5fr 0.5fr 0.4fr;
 }
 
+.pTag {
+    margin-left : 5%;
+    margin-right : 5%;
+}
 /* .link1 {
     max-block-size: 0%;
     margin-left: 3vmin;
