@@ -63,3 +63,9 @@ h1 {
   margin: 0px;
   font-size: 5vmax;
 }
+
+.link1 {
+  max-block-size: 0%;
+  margin-left: 3vmin;
+  display: flex;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InputBox from '../inputBox/InputBox';
 import Button from '../button/button';
 import { Link } from 'react-router-dom';
+import './RomanNumeralConverter.css';
 
 class RomanNumeralConverter extends Component {
   constructor() {
@@ -158,12 +159,16 @@ class RomanNumeralConverter extends Component {
     const { ThousandsRomanNumeral, HundredsRomanNumeral, DozensRomanNumeral, SingleRomanNumeral } = this.state;
     return (
       <div className="RomanNumeralConverter">
+        <div>
+          <Link to='/' className='link1 link' >HomePage </Link>
+        </div>
         <h1>Roman Numeral Converter</h1>
         <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral</a></p>
         <p>Note! The conversion only works until the number 9999 and no more.</p>
         <InputBox 
           handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a number to convert'  
+          sentenceWithinTheInputFrame='Write a number'  
+          isInNumber
         />
         <Button
           handleClick={this.handleClick} 
@@ -179,9 +184,6 @@ class RomanNumeralConverter extends Component {
           :
           <span>Write down a number you want to convert to a Roman number</span>
         }
-        <div>
-          <Link to='/' className='link' >HomePage </Link>
-        </div>
       </div>
     );
   }
