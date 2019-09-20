@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox';
 import Button from '../button/button';
+import './TelephoneNumberValidator.css';
 
 class  TelephoneNumberValidator extends Component {
   constructor() {

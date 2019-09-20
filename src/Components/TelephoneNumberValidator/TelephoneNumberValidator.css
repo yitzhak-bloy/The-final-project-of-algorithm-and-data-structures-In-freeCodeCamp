@@ -1,0 +1,5 @@
+.telephoneNumberValidator {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0fr 0.5fr 0.2fr 1.5fr 1.5fr;
+}
