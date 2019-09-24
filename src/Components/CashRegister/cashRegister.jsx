@@ -101,6 +101,9 @@ class CashRegister extends Component {
     const excess = (this.state.cash - this.state.price).toFixed(2);
     return (
       <div className="cashRegister">
+        <div>
+          <Link to='/' className='link link1' >HomePage</Link>
+        </div>
         <h1>Cash Register</h1>
         <h3>product price</h3>
         <div>
@@ -132,9 +135,6 @@ class CashRegister extends Component {
           WordWrittenInAButton='Calculate the excess' 
         />
         { this.state.calculation ? <Calculation  excess={excess} CurrentCurrency={8} cid={cid} Name={8} cidNamber={8} solution={this.state.solution} /> : null }
-        <div>
-          <Link to='/' className='link' >HomePage</Link>
-        </div>
       </div>
     );
   }
