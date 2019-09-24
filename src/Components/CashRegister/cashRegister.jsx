@@ -4,6 +4,7 @@ import InputBox from '../inputBox/InputBox'
 import Button from '../button/button';
 import CurrencyAvailable from '../CurrencyAvailable/CurrencyAvailable'
 import Calculation from '../calculation/calculation'
+import './cashRegister.css';
 
 class CashRegister extends Component {
   constructor() {
@@ -105,19 +106,23 @@ class CashRegister extends Component {
           <Link to='/' className='link link1' >HomePage</Link>
         </div>
         <h1>Cash Register</h1>
-        <h3>product price</h3>
-        <div>
-          <InputBox 
-            handleChange={this.handlePrice} 
-            sentenceWithinTheInputFrame='Write the product price'  
-          />
-        </div>
-        <h3>The amount received from the customer</h3>
-        <div>
-          <InputBox 
-            handleChange={this.handlePayment} 
-            sentenceWithinTheInputFrame='Write down the amount the customer brought'  
-          />
+        <div className='inputAmounts'>
+          <div>
+            <h3>product price</h3>
+            <InputBox 
+              handleChange={this.handlePrice} 
+              sentenceWithinTheInputFrame='Write the product price' 
+              isTelephoneNumberValidator 
+            />
+          </div>
+          <div>
+            <h3>The amount received from the customer</h3>
+            <InputBox 
+              handleChange={this.handlePayment} 
+              sentenceWithinTheInputFrame='Write down the amount the customer brought'  
+              isTelephoneNumberValidator
+            />
+          </div>
         </div>
         <CurrencyAvailable 
           handlePenny={this.handlePenny}

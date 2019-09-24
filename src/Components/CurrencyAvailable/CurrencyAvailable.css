@@ -1,0 +1,19 @@
+.number {
+    background-color: #DFDBE5;
+    width: 20vw;
+    height: 3vw;
+    font-size: 2.7vw;
+    margin: 0 auto;
+    border: 1.5px solid #9383AA;
+    border-radius: 4px;
+    color: #5f5969; 
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.coins {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
