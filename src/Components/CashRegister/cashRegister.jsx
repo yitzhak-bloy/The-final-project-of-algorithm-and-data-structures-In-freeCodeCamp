@@ -135,10 +135,12 @@ class CashRegister extends Component {
           handleTwenty={this.handleTwenty}
           handleOneHundred={this.handleOneHundred}
         />
-        <Button
-          handleClick={this.handleClick} 
-          WordWrittenInAButton='Calculate the excess' 
-        />
+        <div className='buttonOfCashRegister'>
+          <Button
+            handleClick={this.handleClick} 
+            WordWrittenInAButton='Calculate the excess' 
+          />
+        </div>
         { this.state.calculation ? <Calculation  excess={excess} CurrentCurrency={8} cid={cid} Name={8} cidNamber={8} solution={this.state.solution} /> : null }
       </div>
     );
