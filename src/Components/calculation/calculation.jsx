@@ -42,18 +42,26 @@ function Calculation({ excess, cid }) {
   solution = [];
   calculation(excess, 8, 8, 8, cid)
   let filterSolution = (solution.filter((item) => item[1] > 0)).reverse();
+  let filterSolutionLengthe = filterSolution.length > 0;
+  console.log(filterSolutionLengthe)
 
   return (
     <div>
       {
-        State  === false 
+        State === false 
         ?  
-          <h1>insufficient</h1> 
+          <p className='pBig margin'>insufficient!</p> 
         : 
-          <div>
-            <h2>The excess required to pay the customer is:</h2>           
-            <h1>{ filterSolution }</h1>
-          </div>
+          (
+             filterSolutionLengthe 
+            ?
+            <div>
+            <p className='h2Calculation'>The excess required to pay the customer is:</p>           
+            <p className='pBig margin'>{ filterSolution }</p>
+            </div>
+            :
+            null
+          )
       }
     </div>
   );

@@ -163,7 +163,7 @@ class RomanNumeralConverter extends Component {
           <Link to='/' className='link1 link' >HomePage </Link>
         </div>
         <h1>Roman Numeral Converter</h1>
-        <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral</a></p>
+        <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral </a></p>
         <p>Note! The conversion only works until the number 9999 and no more.</p>
         <InputBox 
           handleChange={this.handleChange} 
@@ -178,11 +178,11 @@ class RomanNumeralConverter extends Component {
           ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length
           ?
           <div>
-            <h2> The number in Roman is: </h2>
-            <h1>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</h1>
+            <p> The number in Roman is: </p>
+            <p className='pBig margin'>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</p>
           </div>
           :
-          <span>Write down a number you want to convert to a Roman number</span>
+          <p>Write down a number you want to convert to a Roman number</p>
         }
       </div>
     );

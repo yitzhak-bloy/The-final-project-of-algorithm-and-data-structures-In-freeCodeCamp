@@ -29,7 +29,7 @@ class  TelephoneNumberValidator extends Component {
           <Link to='/' className='link link1' >HomePage</Link>
         </div>
         <h1>telephone Number Validator</h1>
-        <span className='spanOfTelephone'>Return true if the passed string looks like a valid US phone number</span>
+        <p className='spanOfTelephone'>Return true if the passed string looks like a valid US phone number</p>
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a number to check'
@@ -43,15 +43,15 @@ class  TelephoneNumberValidator extends Component {
           this.state.result
           ?
           <div>
-            <h1>This number is a real phone number!</h1>
+            <p className='pBig'>This number is a real phone number!</p>
           </div>
           : 
             (
               this.state.result === ''
               ?       
-              <span>Enter a phone number for review</span>
+              <p>Enter a phone number for review</p>
               : 
-              <h3>Sorry, this is not a real phone number. Try again.</h3>
+              <p className='pBig'>Sorry, this is not a real phone number. Try again.</p>
             )
         }
       </div>

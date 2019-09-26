@@ -106,7 +106,7 @@ class CashRegister extends Component {
           <Link to='/' className='link link1' >HomePage</Link>
         </div>
         <h1>Cash Register</h1>
-        <p className='pTag'>This is the cash register's calculations, you need to enter the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer. All amounts and calculations are done in US currency.</p>
+        <p className='pTag p'>This is the cash register's calculations, you need to enter the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer. All amounts and calculations are done in US currency.</p>
         <div className='inputAmounts'>
           <div>
             <h3>product price</h3>

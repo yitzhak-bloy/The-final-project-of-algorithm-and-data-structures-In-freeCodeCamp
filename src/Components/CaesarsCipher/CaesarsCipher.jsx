@@ -134,10 +134,11 @@ class  CaesarsCipher extends Component {
             this.state.result1.length
             ?
             <div>
-              <h2> The Caesars Cipher after conversion is: " {this.state.result1} "</h2>
+              <p> The Caesars Cipher after conversion is: </p>
+              <p className='pBig margin'>" {this.state.result1} "</p>
             </div>
             :
-            <span>Write a sentence in Caesars Cipher</span>
+            <p>Write a sentence in Caesars Cipher</p>
           }
           <div>
           </div>
