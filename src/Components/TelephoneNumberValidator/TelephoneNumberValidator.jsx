@@ -29,6 +29,7 @@ class  TelephoneNumberValidator extends Component {
           <Link to='/' className='link link1' >HomePage</Link>
         </div>
         <h1>telephone Number Validator</h1>
+        <span className='spanOfTelephone'>Return true if the passed string looks like a valid US phone number</span>
         <InputBox 
           handleChange={this.handleChange} 
           sentenceWithinTheInputFrame='Write a number to check'
