@@ -135,7 +135,7 @@ class  CaesarsCipher extends Component {
             ?
             <div>
               <p> The Caesars Cipher after conversion is: </p>
-              <p className='pBig margin'>" {this.state.result1} "</p>
+              <p className='pBig margin'>'{this.state.result1}'</p>
             </div>
             :
             <p>Write a sentence in Caesars Cipher</p>
