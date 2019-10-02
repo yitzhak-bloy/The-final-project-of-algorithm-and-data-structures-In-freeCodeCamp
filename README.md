@@ -1,5 +1,6 @@
 The site was built to implement and showcase the solutions for freeCodeCamp's JavaScript Algorithms and Data Structures.
 These solutions were written to receive the JavaScript Algorithms and Data Structures final certificate.
+
 Originally the solutions were written in Vanilla JavaScript and on this site they were converted and written in reactjs and in this directory the entire site was written.
 The site has five different applications
 
