@@ -1,11 +1,15 @@
-The site was built to implement and showcase the solutions for freeCodeCamp's JavaScript Algorithms and Data Structures.
+The website was built to implement and showcase the solutions for freeCodeCamp's JavaScript Algorithms and Data Structures.
+
 These solutions were written to receive the JavaScript Algorithms and Data Structures final certificate.
 
+
+
 Originally the solutions were written in Vanilla JavaScript and on this site they were converted and written in reactjs and in this directory the entire site was written.
+
 The site has five different applications
 
 Palindrome Checker
-Checks whether the given string is Palindrome or not
+Checks whether the passed string is Palindrome or not
 
 Roman Numeral Converter
 Converts the given number into a roman numeral
@@ -17,9 +21,9 @@ telephone Number Validator
 Return true if the passed string looks like a valid US phone number
 
 Cash Register
-you need to enter the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer.
+You need to introduce the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer.
 
-The site was built mainly for a computer screen but was adapted by cssGrid and flexbox for mobile, although it is better adapted to the computer.
+The website was built mainly for a computer screen, but was adapted by cssGrid and flexbox for mobile, although it is better adapted to the computer.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
