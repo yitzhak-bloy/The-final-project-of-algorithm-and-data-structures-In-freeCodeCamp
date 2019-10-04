@@ -1,97 +1,26 @@
-The website was built to implement and showcase the solutions for freeCodeCamp's JavaScript Algorithms and Data Structures.
+The website was built to implement and showcase the solutions for [freeCodeCamp's JavaScript Algorithms and Data Structures](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects).
 
 These solutions were written to receive the JavaScript Algorithms and Data Structures final certificate.
 
-
-
-Originally the solutions were written in Vanilla JavaScript and on this site they were converted and written in reactjs and in this directory the entire site was written.
-
-The site has five different applications
-
-Palindrome Checker
-Checks whether the passed string is Palindrome or not
-
-Roman Numeral Converter
-Converts the given number into a roman numeral
-
-Caesars Cipher
-takes a ROT13 encoded string as input and returns a decoded string.
-
-telephone Number Validator
-Return true if the passed string looks like a valid US phone number
-
-Cash Register
-You need to introduce the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer.
-
-The website was built mainly for a computer screen, but was adapted by cssGrid and flexbox for mobile, although it is better adapted to the computer.
+Originally the solutions were written in Vanilla JavaScript, but on this site they were converted and written in reactjs and in this directory the entire site was written.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The site has five different applications:
 
-In the project directory, you can run:
+1. Palindrome Checker,<br>
+Checks whether the passed string is [Palindrome](https://en.wikipedia.org/wiki/Palindrome) or not.
 
-### `npm start`
+2. Roman Numeral Converter,<br>
+Converts the given number into a [roman numeral](https://en.wikipedia.org/wiki/Roman_numerals).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Caesars Cipher,<br>
+takes a [ROT13](https://en.wikipedia.org/wiki/ROT13) encoded string as input and returns a decoded string.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+4. telephone Number Validator,<br>
+Return true if the passed string looks like a valid US phone number.
 
-### `npm test`
+5. Cash Register,<br>
+You need to introduce the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
+The website was built mainly for a computer screen, but was adapted by css grid and flexbox for mobile, although it is better adapted to the computer.
