@@ -4,7 +4,7 @@ The website was built to implement and showcase the solutions for [freeCodeCamp'
 
 These solutions were written to receive the JavaScript Algorithms and Data Structures final certificate.
 
-Originally the solutions were written in Vanilla JavaScript, but on this site they were converted and written in reactjs and in this directory the entire site was written.
+Originally the solutions were written in Vanilla JavaScript, but on this website they were converted and written in reactjs and in this directory the entire site was written.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
