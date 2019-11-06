@@ -177,12 +177,12 @@ class RomanNumeralConverter extends Component {
         {
           ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length
           ?
-          <div>
-            <p> The number in Roman is: </p>
-            <p className='pBig margin'>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</p>
-          </div>
+            <div>
+              <p> The number in Roman is: </p>
+              <p className='pBig margin'>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</p>
+            </div>
           :
-          <p>Write down a number you want to convert to a Roman number</p>
+            <p>Write down a number you want to convert to a Roman number</p>
         }
       </div>
     );

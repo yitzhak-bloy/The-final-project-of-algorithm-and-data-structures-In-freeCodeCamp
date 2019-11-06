@@ -52,16 +52,14 @@ function Calculation({ excess, cid }) {
         ?  
           <p className='pBig margin'>insufficient!</p> 
         : 
-          (
-             filterSolutionLengthe 
-            ?
+          filterSolutionLengthe 
+          ?
             <div>
             <p className='h2Calculation'>The excess required to pay the customer is:</p>           
             <p className='pBig margin'>{ filterSolution }</p>
             </div>
-            :
+          :
             null
-          )
       }
     </div>
   );

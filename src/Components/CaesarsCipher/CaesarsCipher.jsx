@@ -12,7 +12,7 @@ class  CaesarsCipher extends Component {
     super();
     this.state = {
       Sentence: '',
-      result1: ''
+      result: ''
     };
   }
 
@@ -108,7 +108,7 @@ class  CaesarsCipher extends Component {
       }
     }
     result = result.join('')
-    this.setState({ result1: result})
+    this.setState({ result: result})
   }
 
   render() {
@@ -131,14 +131,14 @@ class  CaesarsCipher extends Component {
         />
         <div>
           {
-            this.state.result1.length
+            this.state.result
             ?
-            <div>
-              <p> The Caesars Cipher after conversion is: </p>
-              <p className='pBig margin'>'{this.state.result1}'</p>
-            </div>
+              <div>
+                <p> The Caesars Cipher after conversion is: </p>
+                <p className='pBig margin'>'{this.state.result1}'</p>
+              </div>
             :
-            <p>Write a sentence in Caesars Cipher</p>
+              <p>Write a sentence in Caesars Cipher</p>
           }
           <div>
           </div>

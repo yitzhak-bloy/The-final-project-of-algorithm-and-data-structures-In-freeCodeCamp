@@ -43,18 +43,14 @@ class PalindromeChecker extends Component {
         { 
           this.state.IsItPalindrome === true
           ? 
-          <p className='pBig'>It's a palindrome!</p>
+            <p className='pBig'>It's a palindrome!</p>
           : 
-          (
             this.state.IsItPalindrome === false
             ?       
-            <p className='pBig'>Sorry, that's not a palindrome.</p>
+              <p className='pBig'>Sorry, that's not a palindrome.</p>
             : 
-            <p>Enter some alpha-numeric characters</p>
-          )
+              <p>Enter some alpha-numeric characters</p>
         }
-        <div>
-        </div>
       </div>
     );
   }

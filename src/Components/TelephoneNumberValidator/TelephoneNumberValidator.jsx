@@ -42,17 +42,15 @@ class  TelephoneNumberValidator extends Component {
         {
           this.state.result
           ?
-          <div>
-            <p className='pBig'>This number is a real phone number!</p>
-          </div>
+            <div>
+              <p className='pBig'>This number is a real phone number!</p>
+            </div>
           : 
-            (
-              this.state.result === ''
-              ?       
+            this.state.result === ''
+            ?       
               <p>Enter a phone number for review</p>
-              : 
+            : 
               <p className='pBig'>Sorry, this is not a real phone number. Try again.</p>
-            )
         }
       </div>
     );
