@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox';
 import Button from '../button/button';
 import './CaesarsCipher.css';
 
+const CaesarsCipher = Component => {
+  const [sentence, setSentence] = useState('');
+  const [result, setresult] = useState('');
 
-// import CheckerBox from '../checkerBox/checkerBox';
-
-class  CaesarsCipher extends Component {
-  constructor() {
-    super();
-    this.state = {
-      Sentence: '',
-      result: ''
-    };
+  const handleChange = (sentence) => {
+    setSentence(sentence.target.value)
   }
 
-  handleChange = (sentence) => {
-    this.setState({ Sentence: sentence.target.value })
-  }
-
-  handleClick = () => {
+  const handleClick = () => {
     let result = [];
-    let SentenceToConver = this.state.Sentence;
+    let SentenceToConver = sentence;
     for (let i = 0; i < SentenceToConver.length; i++) {
       switch (SentenceToConver[i].toUpperCase()) {
         case 'A':
@@ -108,44 +100,42 @@ class  CaesarsCipher extends Component {
       }
     }
     result = result.join('')
-    this.setState({ result: result})
+    setresult(result)
   }
 
-  render() {
-    return (
-      <div className="CaesarsCipher">
-      <Link to='/' className='link link1' >HomePage</Link>
-        <h1>Caesars Cipher</h1>
-        <div className='pTag'>
-          <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string. For example, in the following joke, the punchline has been obscured by ROT13: 'Why did the chicken cross the road? Gb trg gb gur bgure fvqr!'</p>
-          <p>git it a try!</p>
-        </div>
-        <InputBox 
-          handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a sentence to convert'  
-          isCaesarsCipher
-        />
-        <Button
-          handleClick={this.handleClick} 
-          WordWrittenInAButton='conversion' 
-        />
+  return (
+    <div className="CaesarsCipher">
+    <Link to='/' className='link link1' >HomePage</Link>
+      <h1>Caesars Cipher</h1>
+      <div className='pTag'>
+        <p>takes a <a href="https://en.wikipedia.org/wiki/ROT13" rel="noopener noreferrer" target="_blank" >ROT13</a> encoded string as input and returns a decoded string. For example, in the following joke, the punchline has been obscured by ROT13: 'Why did the chicken cross the road? Gb trg gb gur bgure fvqr!'</p>
+        <p>git it a try!</p>
+      </div>
+      <InputBox 
+        handleChange={handleChange} 
+        sentenceWithinTheInputFrame='Write a sentence to convert'  
+        isCaesarsCipher
+      />
+      <Button
+        handleClick={handleClick} 
+        WordWrittenInAButton='conversion' 
+      />
+      <div>
+        {
+          result
+          ?
+            <div>
+              <p> The Caesars Cipher after conversion is: </p>
+              <p className='pBig margin'>'{result}'</p>
+            </div>
+          :
+            <p>Write a sentence in Caesars Cipher</p>
+        }
         <div>
-          {
-            this.state.result
-            ?
-              <div>
-                <p> The Caesars Cipher after conversion is: </p>
-                <p className='pBig margin'>'{this.state.result1}'</p>
-              </div>
-            :
-              <p>Write a sentence in Caesars Cipher</p>
-          }
-          <div>
-          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default CaesarsCipher;
