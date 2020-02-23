@@ -1,192 +1,184 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import InputBox from '../inputBox/InputBox';
 import Button from '../button/button';
 import { Link } from 'react-router-dom';
 import './RomanNumeralConverter.css';
 
-class RomanNumeralConverter extends Component {
-  constructor() {
-      super();
-      this.state = {
-        Number: '',
-        ThousandsRomanNumeral: '',
-        HundredsRomanNumeral: '',
-        DozensRomanNumeral: '',
-        SingleRomanNumeral: '',
-      };
-    }
+const RomanNumeralConverter = () => {
+  const [number, setNumber] = useState('');
+  const [thousandsRomanNumeral, setThousandsRomanNumeral] = useState('');
+  const [hundredsRomanNumeral, setHundredsRomanNumeral] = useState('');
+  const [dozensRomanNumeral, setDozensRomanNumeral] = useState('');
+  const [singleRomanNumeral, setSingleRomanNumeral] = useState('');
 
-  handleChange = (sentence) => {
-    this.setState({ Number: sentence.target.value })
+  const handleChange = (numbers) => {
+    setNumber(numbers.target.value)
   }
 
-  handleClick = () => {
-    const Thousands = Math.floor(this.state.Number / 1000) * 1000;
-    const Hundreds = Math.floor((this.state.Number-Thousands) / 100) * 100;
-    const Dozens = Math.floor((this.state.Number-Thousands-Hundreds) / 10) * 10;
-    const Single = Math.floor((this.state.Number-Thousands-Hundreds-Dozens) / 1);
+  const handleClick = () => {
+    const Thousands = Math.floor(number / 1000) * 1000;
+    const Hundreds = Math.floor((number-Thousands) / 100) * 100;
+    const Dozens = Math.floor((number-Thousands-Hundreds) / 10) * 10;
+    const Single = Math.floor((number-Thousands-Hundreds-Dozens) / 1);
 
     switch (Thousands) {
       case 1000:
-        this.setState({ ThousandsRomanNumeral: 'M' });
+        setThousandsRomanNumeral('M');
       break;
       case 2000:
-        this.setState({ ThousandsRomanNumeral: 'MM' });      
+        setThousandsRomanNumeral('MM');
         break;
       case 3000:
-        this.setState({ ThousandsRomanNumeral: 'MMM' });      
+        setThousandsRomanNumeral('MMM');
         break;
       case 4000:
-        this.setState({ ThousandsRomanNumeral: 'MMMM' });      
+        setThousandsRomanNumeral('MMMM');
         break;
       case 5000:
-        this.setState({ ThousandsRomanNumeral: 'MMMMM' });      
+        setThousandsRomanNumeral('MMMMM');
         break;
       case 6000:
-        this.setState({ ThousandsRomanNumeral: 'MMMMMM' });      
+        setThousandsRomanNumeral('MMMMMM');
         break;
       case 7000:
-        this.setState({ ThousandsRomanNumeral: 'MMMMMMM' });      
+        setThousandsRomanNumeral('MMMMMMM');
         break;
       case 8000:
-        this.setState({ ThousandsRomanNumeral: 'MMMMMMMM' }); 
+        setThousandsRomanNumeral('MMMMMMMM');
         break;
       case 9000:
-        this.setState({ ThousandsRomanNumeral: 'MMMMMMMMM' });
+        setThousandsRomanNumeral('MMMMMMMMM');
         break;
       default:
-        this.setState({ ThousandsRomanNumeral: '' });
+        setThousandsRomanNumeral('');
     }
 
     switch (Hundreds) {
       case 100:
-        this.setState({ HundredsRomanNumeral: 'C' });      
+        setHundredsRomanNumeral('C');
         break;
       case 200:
-        this.setState({ HundredsRomanNumeral: 'CC' });      
+        setHundredsRomanNumeral('CC');
         break;
       case 300:
-        this.setState({ HundredsRomanNumeral: 'CCC' });      
+        setHundredsRomanNumeral('CCC');
         break;
       case 400:
-        this.setState({ HundredsRomanNumeral: 'CD' });      
+        setHundredsRomanNumeral('CD');
         break;
       case 500:
-        this.setState({ HundredsRomanNumeral: 'D' });     
+        setHundredsRomanNumeral('D');
         break;
       case 600:
-        this.setState({ HundredsRomanNumeral: 'DC' });      
+        setHundredsRomanNumeral('DC');
         break;
       case 700:
-        this.setState({ HundredsRomanNumeral: 'DCC' });      
+        setHundredsRomanNumeral('DCC');
         break;
       case 800:
-        this.setState({ HundredsRomanNumeral: 'DCCC' });      
+        setHundredsRomanNumeral('DCCC');
         break;
       case 900:
-        this.setState({ HundredsRomanNumeral: 'CM' });      
+        setHundredsRomanNumeral('CM');
         break;
       default:
-        this.setState({ HundredsRomanNumeral: '' });      
+        setHundredsRomanNumeral('');
     }
 
     switch (Dozens) {
       case 10:
-        this.setState({ DozensRomanNumeral: 'X' });      
+        setDozensRomanNumeral('X');
         break;
       case 20:
-        this.setState({ DozensRomanNumeral: 'XX' });      
+        setDozensRomanNumeral('XX');
         break;
       case 30:
-        this.setState({ DozensRomanNumeral: 'XXX' });      
+        setDozensRomanNumeral('XXX');
         break;
       case 40:
-        this.setState({ DozensRomanNumeral: 'XL' });      
+        setDozensRomanNumeral('XL');
         break;
       case 50:
-        this.setState({ DozensRomanNumeral: 'L' });      
+        setDozensRomanNumeral('L');
         break;
       case 60:
-        this.setState({ DozensRomanNumeral: 'LX' });      
+        setDozensRomanNumeral('LX');
         break;
       case 70:
-        this.setState({ DozensRomanNumeral: 'LXX' });      
+        setDozensRomanNumeral('LXX');
         break;
       case 80:
-        this.setState({ DozensRomanNumeral: 'LXXX' });      
+        setDozensRomanNumeral('LXXX');
         break;
       case 90:
-        this.setState({ DozensRomanNumeral: 'XC' });      
+        setDozensRomanNumeral('XC');
         break;
       default:
-        this.setState({ DozensRomanNumeral: '' });      
+        setDozensRomanNumeral('');
     }
 
     switch (Single) {
       case 1:
-        this.setState({ SingleRomanNumeral: 'I' });      
+        setSingleRomanNumeral('I');
         break;
       case 2:
-        this.setState({ SingleRomanNumeral: 'II' });      
+        setSingleRomanNumeral('II');
         break;
       case 3:
-        this.setState({ SingleRomanNumeral: 'III' });      
+        setSingleRomanNumeral('III');
         break;
       case 4:
-        this.setState({ SingleRomanNumeral: 'IV' });      
+        setSingleRomanNumeral('IV');
         break;
       case 5:
-        this.setState({ SingleRomanNumeral: 'V' });      
+        setSingleRomanNumeral('V');
         break;
       case 6:
-        this.setState({ SingleRomanNumeral: 'VI' });      
+        setSingleRomanNumeral('VI');
         break;
       case 7:
-        this.setState({ SingleRomanNumeral: 'VII' });     
+        setSingleRomanNumeral('VII');
         break;
       case 8:
-        this.setState({ SingleRomanNumeral: 'VIII' });      
+        setSingleRomanNumeral('VIII');
         break;
       case 9:
-        this.setState({ SingleRomanNumeral: 'IX' });      
+        setSingleRomanNumeral('IX');
         break;
       default:
-        this.setState({ SingleRomanNumeral: '' });      
+        setSingleRomanNumeral('');
     }  
   }
 
-  render() {
-    const { ThousandsRomanNumeral, HundredsRomanNumeral, DozensRomanNumeral, SingleRomanNumeral } = this.state;
-    return (
-      <div className="RomanNumeralConverter">
-        <div>
-          <Link to='/' className='link1 link' >HomePage </Link>
-        </div>
-        <h1>Roman Numeral Converter</h1>
-        <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral </a></p>
-        <p>Note! The conversion only works until the number 9999 and no more.</p>
-        <InputBox 
-          handleChange={this.handleChange} 
-          sentenceWithinTheInputFrame='Write a number'  
-          isRomanNumeralConverter
-        />
-        <Button
-          handleClick={this.handleClick} 
-          WordWrittenInAButton='conversion' 
-        />
-        {
-          ThousandsRomanNumeral.length + HundredsRomanNumeral.length + DozensRomanNumeral.length + SingleRomanNumeral.length
-          ?
-            <div>
-              <p> The number in Roman is: </p>
-              <p className='pBig margin'>{ThousandsRomanNumeral + HundredsRomanNumeral + DozensRomanNumeral + SingleRomanNumeral}</p>
-            </div>
-          :
-            <p>Write down a number you want to convert to a Roman number</p>
-        }
+  return (
+    <div className="RomanNumeralConverter">
+      <div>
+        <Link to='/' className='link1 link' >HomePage </Link>
       </div>
-    );
-  }
+      <h1>Roman Numeral Converter</h1>
+      <p>Converts the given number into a <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener noreferrer" target="_blank" >roman numeral </a></p>
+      <p>Note! The conversion only works until the number 9999 and no more.</p>
+      <InputBox 
+        handleChange={handleChange} 
+        sentenceWithinTheInputFrame='Write a number'  
+        isRomanNumeralConverter
+      />
+      <Button
+        handleClick={handleClick} 
+        WordWrittenInAButton='conversion' 
+      />
+      {
+        thousandsRomanNumeral.length + hundredsRomanNumeral.length + dozensRomanNumeral.length + singleRomanNumeral.length
+        ?
+          <div>
+            <p> The number in Roman is: </p>
+            <p className='pBig margin'>{thousandsRomanNumeral + hundredsRomanNumeral + dozensRomanNumeral + singleRomanNumeral}</p>
+          </div>
+        :
+          <p>Write down a number you want to convert to a Roman number</p>
+      }
+    </div>
+  );
 }
 
 export default RomanNumeralConverter;
