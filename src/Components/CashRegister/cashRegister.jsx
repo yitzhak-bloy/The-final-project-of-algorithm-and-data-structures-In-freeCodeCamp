@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import InputBox from '../inputBox/InputBox'
 import Button from '../button/button';
@@ -6,150 +6,139 @@ import CurrencyAvailable from '../CurrencyAvailable/CurrencyAvailable'
 import Calculation from '../calculation/calculation'
 import './cashRegister.css';
 
-class CashRegister extends Component {
-  constructor() {
-    super();
-    this.state = {
-      Calculation: false,
-      price: '',
-      cash: '',
-      solution: [],
-      penny: 0,
-      nickel: 0,
-      dime: 0,
-      quarter: 0,
-      one: 0,
-      five: 0,
-      ten: 0,
-      twenty: 0,
-      oneHundred: 0,
-      solution1: ''
-    };
+const CashRegister = () => {
+  const [ calculation, setCalculation ] = useState(false);
+  const [ price, setPrice ] = useState('');
+  const [ cash, setCash ] = useState('');
+  const [ solution, setSolution ] = useState([]);
+  const [ penny, setPenny ] = useState(0);
+  const [ nickel, setNickel ] = useState(0);
+  const [ dime, setDime ] = useState(0);
+  const [ quarter, setQuarter ] = useState(0);
+  const [ one, setOne ] = useState(0);
+  const [ five, setFive ] = useState(0);
+  const [ ten, setTen ] = useState(0);
+  const [ twenty, setTwenty ] = useState(0);
+  const [ oneHundred, setOneHundred ] = useState(0);
+
+  const handlePrice = (sentence) => {
+    setPrice(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handlePrice = (sentence) => {
-    this.setState({ price: sentence.target.value })
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handlePayment = (sentence) => {
+    setCash(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handlePayment = (sentence) => {
-    this.setState({ cash: sentence.target.value })
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handlePenny = (sentence) => {
+    setPenny(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handlePenny = (sentence) => {
-    this.setState({ penny: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleNickel = (sentence) => {
+    setNickel(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleNickel = (sentence) => {
-    this.setState({ nickel: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleDime = (sentence) => {
+    setDime(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleDime = (sentence) => {
-    this.setState({ dime: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleQuarter = (sentence) => {
+    setQuarter(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleQuarter = (sentence) => {
-    this.setState({ quarter: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleOne = (sentence) => {
+    setOne(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleOne = (sentence) => {
-    this.setState({ one: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleFive = (sentence) => {
+    setFive(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleFive = (sentence) => {
-    this.setState({ five: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleTen = (sentence) => {
+    setTen(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleTen = (sentence) => {
-    this.setState({ ten: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleTwenty = (sentence) => {
+    setTwenty(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleTwenty = (sentence) => {
-    this.setState({ twenty: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleOneHundred = (sentence) => {
+    setOneHundred(sentence.target.value);
+    setCalculation(false);
+    setSolution([]);
   }
 
-  handleOneHundred = (sentence) => {
-    this.setState({ oneHundred: sentence.target.value})
-    this.setState({ calculation: false })
-    this.setState({ solution: [] })
+  const handleClick = () => {
+    setCalculation(true);
   }
 
-  handleClick = () => {
-    this.setState({ calculation: true })
-  }
+  const cid = [['PENNY', penny], ['NICKEL', nickel], ['DIME', dime], ['QUARTER', quarter], ['ONE', one], ['FIVE', five], ['TEN', ten], ['TWENTY', twenty], ['ONE HUNDRED', oneHundred]]
+  const excess = (cash - price).toFixed(2);
 
-  render() {
-    const cid = [['PENNY', this.state.penny], ['NICKEL', this.state.nickel], ['DIME', this.state.dime], ['QUARTER', this.state.quarter], ['ONE', this.state.one], ['FIVE', this.state.five], ['TEN', this.state.ten], ['TWENTY', this.state.twenty], ['ONE HUNDRED', this.state.oneHundred]]
-    const excess = (this.state.cash - this.state.price).toFixed(2);
-    return (
-      <div className="cashRegister">
+  return (
+    <div className="cashRegister">
+      <div>
+        <Link to='/' className='link link1' >HomePage</Link>
+      </div>
+      <h1>Cash Register</h1>
+      <p className='pTag p'>This is the cash register's calculations, you need to enter the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer. All amounts and calculations are done in US currency.</p>
+      <div className='inputAmounts'>
         <div>
-          <Link to='/' className='link link1' >HomePage</Link>
-        </div>
-        <h1>Cash Register</h1>
-        <p className='pTag p'>This is the cash register's calculations, you need to enter the product price and the amount received from the customer and the amounts currently in the cash register, and the site will calculate for you the surplus that comes to the customer. All amounts and calculations are done in US currency.</p>
-        <div className='inputAmounts'>
-          <div>
-            <h3>product price</h3>
-            <InputBox 
-              handleChange={this.handlePrice} 
-              sentenceWithinTheInputFrame='Write the product price' 
-              isTelephoneNumberValidator 
-            />
-          </div>
-          <div>
-            <h3>The amount received from the customer</h3>
-            <InputBox 
-              handleChange={this.handlePayment} 
-              sentenceWithinTheInputFrame='Write down the amount the customer brought'  
-              isTelephoneNumberValidator
-            />
-          </div>
-        </div>
-        <CurrencyAvailable 
-          handlePenny={this.handlePenny}
-          handleNickel={this.handleNickel}
-          handleDime={this.handleDime}
-          handleQuarter={this.handleQuarter}
-          handleOne={this.handleOne}
-          handleFive={this.handleFive}
-          handleTen={this.handleTen}
-          handleTwenty={this.handleTwenty}
-          handleOneHundred={this.handleOneHundred}
-        />
-        <div className='buttonOfCashRegister'>
-          <Button
-            handleClick={this.handleClick} 
-            WordWrittenInAButton='Calculate the excess' 
+          <h3>product price</h3>
+          <InputBox 
+            handleChange={handlePrice} 
+            sentenceWithinTheInputFrame='Write the product price' 
+            isTelephoneNumberValidator 
           />
         </div>
-        { this.state.calculation ? <Calculation  excess={excess} CurrentCurrency={8} cid={cid} Name={8} cidNamber={8} solution={this.state.solution} /> : null }
+        <div>
+          <h3>The amount received from the customer</h3>
+          <InputBox 
+            handleChange={handlePayment} 
+            sentenceWithinTheInputFrame='Write down the amount the customer brought'  
+            isTelephoneNumberValidator
+          />
+        </div>
       </div>
-    );
-  }
+      <CurrencyAvailable 
+        handlePenny={handlePenny}
+        handleNickel={handleNickel}
+        handleDime={handleDime}
+        handleQuarter={handleQuarter}
+        handleOne={handleOne}
+        handleFive={handleFive}
+        handleTen={handleTen}
+        handleTwenty={handleTwenty}
+        handleOneHundred={handleOneHundred}
+      />
+      <div className='buttonOfCashRegister'>
+        <Button
+          handleClick={handleClick} 
+          WordWrittenInAButton='Calculate the excess' 
+        />
+      </div>
+      { calculation ? <Calculation  excess={excess} CurrentCurrency={8} cid={cid} Name={8} cidNamber={8} solution={solution} /> : null }
+    </div>
+  );
 }
 
 export default CashRegister;
-
-// בנית קומפוננט שתכיל שני מקומות לקלט הסכום ששילם הלקוח ולקלט העלות מוצר
-// בנית קומפוננה שתכיל מקום להכניס את הסכום שנמצא בקופה בחלוקה לפי מטבעות
-// בניית האלגוריתם שינתח ויפלוט את העודף שמגיע ללקוח
