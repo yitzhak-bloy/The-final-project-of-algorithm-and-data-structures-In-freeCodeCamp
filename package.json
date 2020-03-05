@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "homepage": "https://yitzhak-bloy.github.io/freeCodeCamp-JavaScript-Algorithms"
+    "homepage": "http://yitzhak-bloy.github.io/freeCodeCamp-JavaScript-Algorithms"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
