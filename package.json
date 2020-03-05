@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "homepage": "https://yitzhak-bloy.github.io/The-final-project-of-algorithm-and-data-structures-In-freeCodeCamp"
+    "homepage": "https://yitzhak-bloy.github.io/freeCodeCamp-JavaScript-Algorithms"
   },
   "scripts": {
     "predeploy": "npm run build",
