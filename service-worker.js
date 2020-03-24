@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/freeCodeCamp-JavaScript-Algorithms/precache-manifest.b84811103f697c0e23f1a9d7dbcde8ec.js"
+  "/freeCodeCamp-JavaScript-Algorithms/precache-manifest.135c8b02f1d08ccd4dec74e15518781b.js"
 );
 
 self.addEventListener('message', (event) => {
